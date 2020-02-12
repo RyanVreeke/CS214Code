@@ -18,8 +18,8 @@
 ;;; Precondition: itsWidth >= 0.0, itsHeight >= 0.0.
 ;;; Return: the area of the corresponding rectangle.
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defn rectangleArea [itsWidth, itsHeight]
-  (* itsWidth itsHeight  ; return itsWidth * itsHeight
+(defn rectangleArea [itsWidth itsHeight]
+  (* itsWidth itsHeight)  ; return itsWidth * itsHeight
 )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -30,20 +30,18 @@
 (defn -main []
   (println "\nTo compute the area of a rectangle,")
   (print   " enter its width: ") (flush)
-  (let
-    [ width (read) ]
+  (def width (read))
+  (assert (>= width 0) "-main: width must be positive")
+  (print   " enter its height: ") (flush)
+  (def height (read))
+  (assert (>= height 0) "-main: height must be positive")
 
-    (assert (>= width 0) "-main: width must be positive")
-
-    [ height (read) ]
-
-    (assert (>= height 0) "-main: height must be positive")
-    (printf "\nThe area is %f\n\n" (rectangleArea width, height))
+; need to put in float/decimal numbers as input because of the formating calls here down below
+    (printf "\nThe area is %f\n\n" (rectangleArea width height))
 
     (print "\nThe area is ")
-    (print (rectangleArea width, height))
+    (print (rectangleArea width height))
     (print "\n\n")
 
-    (printf "\nThe area is %.15f\n\n" (rectangleArea width, height))
-  )
+    (printf "\nThe area is %.15f\n\n" (rectangleArea width height))
 )  

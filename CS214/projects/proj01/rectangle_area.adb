@@ -40,11 +40,11 @@ begin
    area := rectangleArea(width, height);
 
    New_Line;
-   Put("The circle's area is ");
+   Put("The rectangle's area is ");
    Put(area);
    New_Line; New_Line; 
 
-   Put("The circle's area is ");
+   Put("The rectangle's area is ");
    Put(area, 1, 15, 0);
    New_Line; New_Line; 
 end rectangle_area;
