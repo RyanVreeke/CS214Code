@@ -1,0 +1,21 @@
+Example1:
+
+Example2: 
+1) When you input an underscore the program just echo's it back
+while still recognizing whether or not the other inputed values
+are a NUMBER or WORD. An example is the input 5_jab where the 
+result would be NUMBER_WORD.
+
+Example3:
+WORKED
+
+Example4:
+1) A terminal is denoted using All-Caps while a non-terminal is in All-lowercase.
+2) It is strange that the temperature controller can't determine if the heat is on / off
+or what the temperature is set to.
+
+Example5:
+WORKED
+
+Example6:
+WORKED
