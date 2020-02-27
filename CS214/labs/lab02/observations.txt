@@ -1,4 +1,7 @@
 Example1:
+1) I see different cases that seem to take into account whether or not the text entered
+into the program matches any of the designated commands and if so it takes that into 
+account using a new buffer.
 
 Example2: 
 1) When you input an underscore the program just echo's it back

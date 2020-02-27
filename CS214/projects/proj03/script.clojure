@@ -1,0 +1,83 @@
+Script started on 2020-02-25 20:58:49-0500
+]0;rjv59@gold26: ~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[01;32mrjv59@gold26[00m:[01;34m~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[00m$ cat src/le tter_grade.clj
+;;;; letter_grade.clj is a driver for function letterGrade().
+;;;;
+;;;; Input: average an integer
+;;;; Output: The character corresponding to the average
+;;;;          could be 'A', 'B', 'C', 'D', or 'F'
+;;;;
+;;;; Usage: clojure -m letter_grade
+;;;;
+;;;; Begun by: Prof. Adams, for CS 214 at Calvin College.
+;;;; Completed by: Ryan Vreeke
+;;;; Date: 25 Feb, 2020
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(ns letter_grade)                    ; name the program
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; letterGrade() returns the code for a given academic year.
+;;; Receive: average, an integer.
+;;; Precondition: average is positive
+;;; Return: the character corresponding to the average.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defn letterGrade [average] 
+  (cond 
+    (= (quot average 10) 10) \A
+    (= (quot average 10) 9)  \A
+    (= (quot average 10) 8)  \B
+    (= (quot average 10) 7)  \C
+    (= (quot average 10) 6)  \D
+    :else                    \F
+  )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; Function -main() test-drives our letterGrade() function.
+;;; Input: average: an integer.
+;;; Output: the corresponding letter grade 'A', 'B', 'C', 'D', or 'F'.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defn -main []
+ (print "\nEnter your average: ") (flush)
+ (let
+    [ average (read) ]                   ; read average (an integer)
+    (println (letterGrade average))      ; display its code
+ )
+)
+
+]0;rjv59@gold26: ~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[01;32mrjv59@gold26[00m:[01;34m~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[00m$ [Kclojure -m  letter_fg  grade
+
+Enter your average: 100
+A
+]0;rjv59@gold26: ~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[01;32mrjv59@gold26[00m:[01;34m~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[00m$ [Kclojure -m  letter_grade
+
+Enter your average: 96
+A
+]0;rjv59@gold26: ~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[01;32mrjv59@gold26[00m:[01;34m~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[00m$ [Kclojure -m  letter_grade
+
+Enter your average: 85
+B
+]0;rjv59@gold26: ~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[01;32mrjv59@gold26[00m:[01;34m~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[00m$ [Kclojure -m  letter_grade
+
+Enter your average: 70
+C
+]0;rjv59@gold26: ~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[01;32mrjv59@gold26[00m:[01;34m~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[00m$ [Kclojure -m  letter_grade
+
+Enter your average: 64
+D
+]0;rjv59@gold26: ~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[01;32mrjv59@gold26[00m:[01;34m~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[00m$ [Kclojure -m  letter_grade
+
+Enter your average: 49
+F
+]0;rjv59@gold26: ~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[01;32mrjv59@gold26[00m:[01;34m~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[00m$ [Kclojure -m  letter_grade
+
+Enter your average: 10
+F
+]0;rjv59@gold26: ~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[01;32mrjv59@gold26[00m:[01;34m~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[00m$ [Kclojure -m  letter_grade
+
+Enter your average: -5
+F
+]0;rjv59@gold26: ~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[01;32mrjv59@gold26[00m:[01;34m~/Desktop/CS214/CS214Code/CS214/projects/proj03/clojure[00m$ [Kexit
+
+Script done on 2020-02-25 20:59:53-0500
