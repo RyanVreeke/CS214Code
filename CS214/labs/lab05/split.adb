@@ -7,8 +7,8 @@
 --                        Astring(Pos..Astring'Last).
 --
 -- Begun by: Dr. Adams, for CS 214 at Calvin College.
--- Completed by:
--- Date:
+-- Completed by: Ryan Vreeke
+-- Date: March 05, 2020
 --------------------------------------------------------------
 
 with Ada.Text_IO, Ada.Integer_Text_IO, Ada.Strings.Fixed;
